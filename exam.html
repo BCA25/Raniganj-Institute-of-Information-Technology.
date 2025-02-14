@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination - Amit Coaching</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="exam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="images/amity-logo.svg" type="image/svg+xml">
+                        <img src="images/amity-logo.png" alt="Amity University Logo" class="logo-img">
+                    </picture>
+                    <span class="logo-text">Amit Coaching</span>
+                </a>
+            </div>
+            <div class="exam-info">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time-left">00:00:00</span>
+                </div>
+                <div class="student-info">
+                    <i class="fas fa-user"></i>
+                    <span id="student-name">Student Name</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="exam-container">
+        <div class="exam-sidebar">
+            <div class="exam-progress">
+                <h3>Question Navigator</h3>
+                <div class="question-grid" id="question-navigator">
+                    <!-- Question numbers will be added dynamically -->
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="dot current"></span>
+                        <span>Current</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot answered"></span>
+                        <span>Answered</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot marked"></span>
+                        <span>Marked for Review</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot not-visited"></span>
+                        <span>Not Visited</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exam-content">
+            <div class="question-container" id="question-container">
+                <!-- Questions will be loaded here -->
+            </div>
+
+            <div class="exam-actions">
+                <button id="mark-review" class="btn">
+                    <i class="fas fa-flag"></i> Mark for Review
+                </button>
+                <button id="clear-response" class="btn">
+                    <i class="fas fa-eraser"></i> Clear Response
+                </button>
+                <button id="prev-question" class="btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="next-question" class="btn primary">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button id="submit-exam" class="btn submit" style="display: none;">
+                    <i class="fas fa-check-circle"></i> Submit Exam
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <h2>Submit Exam?</h2>
+            <p>Are you sure you want to submit your exam?</p>
+            <div class="exam-summary">
+                <div class="summary-item">
+                    <span>Answered</span>
+                    <span id="answered-count">0</span>
+                </div>
+                <div class="summary-item">
+                    <span>Marked for Review</span>
+                    <span id="marked-count">0</span>
+                </div>
+                <div class="summary-item">
+                    <span>Not Attempted</span>
+                    <span id="not-attempted-count">0</span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="cancel-submit" class="btn">Cancel</button>
+                <button id="confirm-submit" class="btn submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="exam.js"></script>
+</body>
+</html>

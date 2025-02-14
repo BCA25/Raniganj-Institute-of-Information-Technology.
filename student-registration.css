@@ -1,0 +1,273 @@
+.registration-container {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.registration-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.registration-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.institute-name {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#school {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+#school:focus {
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.form-section h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-section h3 i {
+    color: var(--primary-color);
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.1);
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    background: white;
+    padding: 0 5px;
+    color: var(--primary-color);
+}
+
+#institute {
+    font-weight: 500;
+}
+
+#institute option {
+    font-weight: normal;
+}
+
+#institute option[value="RiiT"] {
+    color: #6b46c1;
+}
+
+#institute option[value="AEC"] {
+    color: #2c5282;
+}
+
+#institute option[value="BBC"] {
+    color: #2f855a;
+}
+
+.registration-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.registration-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.input-group.error {
+    margin-bottom: 1.5rem;
+}
+
+.input-group.error input,
+.input-group.error select,
+.input-group.error textarea {
+    border-color: #dc3545;
+}
+
+.input-group.error::after {
+    content: attr(data-error);
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Email Verification Styles */
+.email-verification {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.verify-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.verify-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.verify-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.verify-btn i {
+    font-size: 1rem;
+}
+
+.otp-section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.otp-section input {
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.otp-timer {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.otp-verified {
+    color: #2f855a;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.otp-error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-box {
+        padding: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+}
+
+/* Add this to styles.css if not already present */
+.student-reg-btn {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.student-reg-btn:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.student-reg-btn i {
+    font-size: 1.1rem;
+}

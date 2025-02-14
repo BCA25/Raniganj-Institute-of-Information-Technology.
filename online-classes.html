@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classes - Amit Online Coaching Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .class-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .class-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .live-indicator {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #dc3545;
+            color: white;
+            border-radius: 20px;
+            margin: 1rem 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .class-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            padding: 1rem 2rem;
+            background: #f8f9fa;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .class-schedule {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            background: #f8f9fa;
+        }
+
+        .schedule-time {
+            flex: 0 0 150px;
+            font-weight: bold;
+            color: #4a90e2;
+        }
+
+        .schedule-details {
+            flex: 1;
+        }
+
+        .schedule-subject {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-teacher {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .join-button {
+            padding: 0.5rem 1.5rem;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .join-button:hover {
+            background: #218838;
+        }
+
+        .join-button.disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+
+        .status-live {
+            background: #dc3545;
+            color: white;
+        }
+
+        .status-upcoming {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .status-completed {
+            background: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Amit Coaching</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="online-classes.html" class="active">Online Classes</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="login.html" class="login-btn">Student Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="class-container">
+        <div class="class-header">
+            <h1>Live Online Classes</h1>
+            <div class="live-indicator">
+                <i class="fas fa-broadcast-tower"></i> Live Classes in Progress
+            </div>
+        </div>
+
+        <div class="class-tabs">
+            <button class="tab-button active" data-tab="today">Today's Schedule</button>
+            <button class="tab-button" data-tab="week">This Week</button>
+            <button class="tab-button" data-tab="recorded">Recorded Classes</button>
+        </div>
+
+        <div class="class-schedule" id="today-schedule">
+            <!-- Schedule items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="online-classes.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Signup - Amit Online Coaching Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="teacher-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="site-title">Amit Coaching</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="signup-container">
+        <div class="signup-box">
+            <h2>Teacher Registration</h2>
+            <form id="teacher-signup-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-graduation-cap"></i>
+                    <select id="qualification" required>
+                        <option value="">Select Highest Qualification</option>
+                        <option value="Bachelors">Bachelor's Degree</option>
+                        <option value="Masters">Master's Degree</option>
+                        <option value="PhD">Ph.D.</option>
+                        <option value="MPhil">M.Phil</option>
+                        <option value="BEd">B.Ed</option>
+                        <option value="MEd">M.Ed</option>
+                        <option value="NET">NET/SET</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-book"></i>
+                    <select id="subjects" multiple required>
+                        <option value="" disabled>Select Subjects to Teach</option>
+                    </select>
+                    <small class="help-text">Hold Ctrl (Windows) or Command (Mac) to select multiple subjects</small>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="number" id="experience" placeholder="Years of Experience" required min="0">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Create Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="signup-submit">Register as Teacher</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Amit Online Coaching Center. All rights reserved.</p>
+    </footer>
+
+    <script src="teacher-signup.js"></script>
+</body>
+</html>

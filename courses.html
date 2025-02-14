@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Courses - Amit Online Coaching Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .course-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .course-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .course-table th,
+        .course-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .course-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .course-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .subject-code {
+            font-family: monospace;
+            color: #6c757d;
+        }
+
+        .subject-name {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .subject-details {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .view-button {
+            padding: 0.5rem 1rem;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .view-button:hover {
+            background: #357abd;
+        }
+
+        .credits-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #e9ecef;
+            color: #495057;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .semester-section {
+            margin-bottom: 3rem;
+        }
+
+        .semester-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Amit Coaching</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="online-classes.html">Online Classes</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="login.html" class="login-btn">Student Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="course-container">
+        <div class="course-header">
+            <h1>BCA Course Curriculum</h1>
+            <p>Bachelor of Computer Applications</p>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-title">Semester 1 Subjects</h2>
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Credits</th>
+                        <th>Details</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="subject-code">BCA101</td>
+                        <td class="subject-name">C Programming Language</td>
+                        <td><span class="credits-badge">4 Credits</span></td>
+                        <td class="subject-details">
+                            Introduction to programming concepts, data types, control structures, functions, arrays, and pointers
+                        </td>
+                        <td>
+                            <a href="#" class="view-button" onclick="viewSubject('BCA101')">
+                                <i class="fas fa-book-open"></i> View Syllabus
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject-code">BCA102</td>
+                        <td class="subject-name">English Communication</td>
+                        <td><span class="credits-badge">3 Credits</span></td>
+                        <td class="subject-details">
+                            Professional communication, grammar, vocabulary, writing skills, and presentation techniques
+                        </td>
+                        <td>
+                            <a href="#" class="view-button" onclick="viewSubject('BCA102')">
+                                <i class="fas fa-book-open"></i> View Syllabus
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject-code">BCA103</td>
+                        <td class="subject-name">Financial Accounting</td>
+                        <td><span class="credits-badge">3 Credits</span></td>
+                        <td class="subject-details">
+                            Basic accounting concepts, financial statements, tally, and computerized accounting
+                        </td>
+                        <td>
+                            <a href="#" class="view-button" onclick="viewSubject('BCA103')">
+                                <i class="fas fa-book-open"></i> View Syllabus
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject-code">BCA104</td>
+                        <td class="subject-name">Office Automation</td>
+                        <td><span class="credits-badge">3 Credits</span></td>
+                        <td class="subject-details">
+                            MS Office suite, document processing, spreadsheets, presentations, and basic database management
+                        </td>
+                        <td>
+                            <a href="#" class="view-button" onclick="viewSubject('BCA104')">
+                                <i class="fas fa-book-open"></i> View Syllabus
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="courses.js"></script>
+</body>
+</html>

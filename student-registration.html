@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - RiiT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="student-registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="site-title">RiiT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="registration-container">
+        <div class="registration-box">
+            <h2>Student Registration</h2>
+            <h3 class="institute-name" id="selected-institute">Please Select Your Institute</h3>
+            <form id="student-registration-form">
+                <!-- Institute Selection -->
+                <div class="form-section">
+                    <h3><i class="fas fa-university"></i> Institute Selection</h3>
+                    <div class="input-group">
+                        <select id="institute" required>
+                            <option value="">Select Institute</option>
+                            <option value="RiiT">RiiT - Raniganj Institute of Information Technology</option>
+                            <option value="AEC">AEC - Asansol Engineering College</option>
+                            <option value="BBC">BB College - Benoy Badal Dinesh College</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                    <div class="input-group">
+                        <input type="text" id="fullname" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group email-verification">
+                        <button type="button" id="send-otp" class="verify-btn">
+                            <i class="fas fa-envelope"></i> Send OTP
+                        </button>
+                        <div class="otp-section" style="display: none;">
+                            <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" required>
+                            <div class="otp-timer">Time remaining: <span id="timer">02:00</span></div>
+                            <button type="button" id="verify-otp" class="verify-btn">
+                                <i class="fas fa-check-circle"></i> Verify OTP
+                            </button>
+                            <button type="button" id="resend-otp" class="verify-btn" disabled>
+                                <i class="fas fa-redo"></i> Resend OTP
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" id="dob" required>
+                        <label for="dob">Date of Birth</label>
+                    </div>
+                    <div class="input-group">
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Educational Background -->
+                <div class="form-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Educational Background</h3>
+                    <div class="input-group">
+                        <select id="education" required>
+                            <option value="">Current Education Level</option>
+                            <option value="high-school">High School</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="school" value="Raniganj Institute of Information Technology (RiiT)" readonly>
+                        <label for="school">Institute Name</label>
+                    </div>
+                </div>
+
+                <!-- Course Selection -->
+                <div class="form-section">
+                    <h3><i class="fas fa-book"></i> Course Selection</h3>
+                    <div class="input-group">
+                        <select id="course" required>
+                            <option value="">Select Course</option>
+                            <option value="c-programming">C Programming Language</option>
+                            <option value="english">English Communication</option>
+                            <option value="accounting">Financial Accounting</option>
+                            <option value="office">Office Automation</option>
+                            <option value="ecommerce">E-commerce</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select id="batch-timing" required>
+                            <option value="">Preferred Batch Timing</option>
+                            <option value="morning">Morning (9 AM - 12 PM)</option>
+                            <option value="afternoon">Afternoon (2 PM - 5 PM)</option>
+                            <option value="evening">Evening (6 PM - 9 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Address Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Address Information</h3>
+                    <div class="input-group">
+                        <textarea id="address" placeholder="Complete Address" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="city" placeholder="City" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="state" placeholder="State" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="pincode" placeholder="PIN Code" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="registration-submit">Register Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Raniganj Institute of Information Technology (RiiT). All rights reserved.</p>
+    </footer>
+
+    <script src="student-registration.js"></script>
+</body>
+</html>
